@@ -25,9 +25,11 @@ export default function Home() {
     const newNames: string[] = e.target.value
       .split("\n")
       .filter((name: any) => name.trim() !== "");
+
     setNames(newNames); // Actualiza los nombres en el estado
     setCountNames(newNames.length);
     console.log(newNames);
+    localStorage.setItem("names", JSON.stringify(names));
   };
 
   // Actualiza el valor del input a medida que el usuario escribe
@@ -65,7 +67,7 @@ export default function Home() {
 
   useEffect(() => {
     if (pagina === 2 && names.length > 0) {
-      let i = 0;
+      let i = -1;
       const interval = setInterval(() => {
         setVisibleIndexes((prev) => [...prev, i]);
         i++;
@@ -81,6 +83,17 @@ export default function Home() {
     }
   }, [pagina]);
 
+  useEffect(() => {
+    const storedNames = localStorage.getItem("names");
+    if (storedNames) {
+    
+      let array = JSON.parse(storedNames).join("\n");
+      setInput(array);
+      setCountNames(JSON.parse(storedNames).length);
+      setNames(JSON.parse(storedNames));
+    }
+  }, []);
+
   return (
     <div className="">
       <Head>
@@ -88,7 +101,6 @@ export default function Home() {
       </Head>
       <nav className=" max-w-[1292px] mx-auto flex py-[16px] w-full">
         <picture className="block h-[38px]">
-          {" "}
           <Image
             className="w-full h-full object-contain"
             src={"https://app-sorteos.com/img/logo.svg"}
@@ -119,11 +131,10 @@ export default function Home() {
                     value={input}
                     name=""
                     id="lista"
-                    className="border-[0.1rem] border-[#d1d1d1] rounded-md w-full h-[25.3rem] px-[1.4rem] py-[1rem] max-h-[25.3rem] overflow-y-auto focus:border-[#d31c92] focus:border-2 focus:outline-0"
+                    className="text-[1.4rem] text-[#495057] border-[0.1rem] border-[#d1d1d1] rounded-md w-full h-[25.3rem] px-[1.4rem] py-[1rem] max-h-[25.3rem] overflow-y-auto focus:border-[#d31c92] focus:border-2 focus:outline-0"
                   ></textarea>
                   {countNames !== 0 && (
                     <span className=" absolute px-6 py-1 rounded-full right-6 bottom-10 bg-[#fee1f4] text-[#86197d] z-10">
-                      {" "}
                       {countNames}
                     </span>
                   )}
