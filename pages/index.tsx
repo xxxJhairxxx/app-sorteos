@@ -98,7 +98,7 @@ export default function Home() {
       <Head>
         <title>AppSorteos – Generador de Equipos Aleatorios</title>
       </Head>
-      <nav className=" flex py-[16px] w-full cursor-pointer">
+      <nav className=" flex py-[16px] w-full cursor-pointer top-0 left-0 sticky bg-white z-50 shadow-sm/5">
         <div className=" max-w-[1292px] mx-auto w-[80%] flex justify-between items-center">
           <picture className="block h-[38px]">
             <Image
@@ -374,12 +374,32 @@ export default function Home() {
                   Imprimir
                 </button>
                 <button className=" hover:text-[#d31c92] cursor-pointer flex items-center gap-2 h-5">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="18" height="16"><path d="M280 64l40 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l40 0 9.6 0C121 27.5 153.3 0 192 0s71 27.5 78.4 64l9.6 0zM64 112c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16l-16 0 0 24c0 13.3-10.7 24-24 24l-88 0-88 0c-13.3 0-24-10.7-24-24l0-24-16 0zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z" fill="#c43e82"/></svg>
-               Copiar
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    width="18"
+                    height="16"
+                  >
+                    <path
+                      d="M280 64l40 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l40 0 9.6 0C121 27.5 153.3 0 192 0s71 27.5 78.4 64l9.6 0zM64 112c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16l-16 0 0 24c0 13.3-10.7 24-24 24l-88 0-88 0c-13.3 0-24-10.7-24-24l0-24-16 0zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"
+                      fill="#c43e82"
+                    />
+                  </svg>
+                  Copiar
                 </button>
                 <button className=" hover:text-[#d31c92] cursor-pointer flex items-center gap-2 h-5">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="18" height="16"><path d="M48 448L48 64c0-8.8 7.2-16 16-16l160 0 0 80c0 17.7 14.3 32 32 32l80 0 0 288c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-293.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0L64 0zm90.9 233.3c-8.1-10.5-23.2-12.3-33.7-4.2s-12.3 23.2-4.2 33.7L161.6 320l-44.5 57.3c-8.1 10.5-6.3 25.5 4.2 33.7s25.5 6.3 33.7-4.2L192 359.1l37.1 47.6c8.1 10.5 23.2 12.3 33.7 4.2s12.3-23.2 4.2-33.7L222.4 320l44.5-57.3c8.1-10.5 6.3-25.5-4.2-33.7s-25.5-6.3-33.7 4.2L192 280.9l-37.1-47.6z" fill="#c43e82"/></svg>
-                   Copiar para Excel
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    width="18"
+                    height="16"
+                  >
+                    <path
+                      d="M48 448L48 64c0-8.8 7.2-16 16-16l160 0 0 80c0 17.7 14.3 32 32 32l80 0 0 288c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-293.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0L64 0zm90.9 233.3c-8.1-10.5-23.2-12.3-33.7-4.2s-12.3 23.2-4.2 33.7L161.6 320l-44.5 57.3c-8.1 10.5-6.3 25.5 4.2 33.7s25.5 6.3 33.7-4.2L192 359.1l37.1 47.6c8.1 10.5 23.2 12.3 33.7 4.2s12.3-23.2 4.2-33.7L222.4 320l44.5-57.3c8.1-10.5 6.3-25.5-4.2-33.7s-25.5-6.3-33.7 4.2L192 280.9l-37.1-47.6z"
+                      fill="#c43e82"
+                    />
+                  </svg>
+                  Copiar para Excel
                 </button>
               </div>
             </>
@@ -408,6 +428,41 @@ export default function Home() {
           </a>
         </li>
       </ul>
+
+      <section className="w-full py-[7rem]">
+        <div className="max-w-[1292px] mx-auto w-[35%] flex flex-col gap-10">
+          <h2 className="text-[3.2rem] leading-[3.5rem] font-semibold">
+            ¿Cómo funciona el Generador de equipos online?
+          </h2>
+
+          <p className="mt-4 mt-lg-5 _fs16 _lh18">
+            El Generador de Grupos Aleatorios o Generador de Equipos Aleatorios
+            es una <strong>herramienta online y gratuita</strong> que te
+            permitirá dividir una lista de participantes en grupos al azar,
+            seleccionando la cantidad de equipos o la cantidad de participantes
+            por equipo.
+          </p>
+          <p className="_fs16 _lh18">
+            Esta app para generar grupos es una herramienta en línea gratuita
+            para hacer equipos al azar a partir de una lista de
+            nombres/participantes, asignando de manera 100% aleatoria personas a
+            grupos y equipos.
+          </p>
+          <p className="_fs16 _lh18">
+            Comienza a crear equipos o grupos ingresando la lista de nombres en
+            el campo de texto y haciendo clic en el botón "Generar equipos".
+          </p>
+          <p className="_fs16 _lh18">
+            La app distribuirá de forma automática a los miembros en los equipos
+            seleccionados de manera aleatoria y equitativa.
+          </p>
+          <p className="_fs16 _lh18">
+            Puedes cambiar el número de grupos seleccionando la opción de
+            generar por cantidad de equipos o por cantidad de participantes por
+            equipo.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
