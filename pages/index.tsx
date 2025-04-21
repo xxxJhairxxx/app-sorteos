@@ -125,7 +125,7 @@ export default function Home() {
             </ul>
         </div>
       </nav>
-      <div className="bg-[#f3f3fa] py-[8rem]">
+      <div className="bg-[#f3f3fa] pt-[8rem] pb-[4rem]">
         <div className="max-w-[110rem] mx-auto">
           <h1 className="text-[3rem] font-extrabold">
             Generador de Equipos y Grupos Aleatorios
@@ -275,7 +275,15 @@ export default function Home() {
             </div>
           )}
         </div>
+        
       </div>
+      <ul className="border-b border-gray-500 text-[#d31c92] py-[2rem] flex items-center justify-center gap-[8%]">
+          <li><a href="#" className="hover:border-b border-[#d31c92] ">Ruleta Aleatoria</a></li> 
+          <li><a href="#" className="hover:border-b border-[#d31c92] ">Dados Virtuales</a></li>
+          <li><a href="#" className="hover:border-b border-[#d31c92] ">Números Aleatorios</a></li>
+          <li><a href="#" className="hover:border-b border-[#d31c92] ">Lanza una Moneda</a></li>
+      </ul>
+      
     </div>
   );
 }
