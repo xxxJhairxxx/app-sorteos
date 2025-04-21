@@ -99,8 +99,9 @@ export default function Home() {
       <Head>
         <title>AppSorteos – Generador de Equipos Aleatorios</title>
       </Head>
-      <nav className=" max-w-[1292px] mx-auto flex py-[16px] w-full">
-        <picture className="block h-[38px]">
+      <nav className=" flex py-[16px] w-full cursor-pointer">
+        <div className=" max-w-[1292px] mx-auto w-[80%] flex justify-between items-center">
+           <picture className="block h-[38px]">
           <Image
             className="w-full h-full object-contain"
             src={"https://app-sorteos.com/img/logo.svg"}
@@ -109,6 +110,20 @@ export default function Home() {
             alt=""
           ></Image>
         </picture>
+            <ul className="flex gap-[2rem] text-[#495057] text-[1.4rem] font-semibold">
+              <li className="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" className="w-[1.4rem]" viewBox="0 0 512 512"><path d="M149.3 56v80c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V56c0-13.3 10.7-24 24-24h101.3c13.3 0 24 10.7 24 24zm181.3 240v-80c0-13.3-10.7-24-24-24H205.3c-13.3 0-24 10.7-24 24v80c0 13.3 10.7 24 24 24h101.3c13.3 0 24-10.7 24-24zm32-240v80c0 13.3 10.7 24 24 24H488c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24H386.7c-13.3 0-24 10.7-24 24zm-32 80V56c0-13.3-10.7-24-24-24H205.3c-13.3 0-24 10.7-24 24v80c0 13.3 10.7 24 24 24h101.3c13.3 0 24-10.7 24-24zm-205.3 56H24c-13.3 0-24 10.7-24 24v80c0 13.3 10.7 24 24 24h101.3c13.3 0 24-10.7 24-24v-80c0-13.3-10.7-24-24-24zM0 376v80c0 13.3 10.7 24 24 24h101.3c13.3 0 24-10.7 24-24v-80c0-13.3-10.7-24-24-24H24c-13.3 0-24 10.7-24 24zm386.7-56H488c13.3 0 24-10.7 24-24v-80c0-13.3-10.7-24-24-24H386.7c-13.3 0-24 10.7-24 24v80c0 13.3 10.7 24 24 24zm0 160H488c13.3 0 24-10.7 24-24v-80c0-13.3-10.7-24-24-24H386.7c-13.3 0-24 10.7-24 24v80c0 13.3 10.7 24 24 24zM181.3 376v80c0 13.3 10.7 24 24 24h101.3c13.3 0 24-10.7 24-24v-80c0-13.3-10.7-24-24-24H205.3c-13.3 0-24 10.7-24 24z"/></svg> 
+              Aplicaciones <Image src="https://cdn-icons-png.flaticon.com/128/10412/10412566.png"className="w-[1.3rem] h-[1.6rem] rotate-180 mt-1" width={50} height={50} alt="arrow-down" /></li>
+              <li>Precios</li>
+              <li className="flex items-center gap-2">Ayuda <Image src="https://cdn-icons-png.flaticon.com/128/10412/10412566.png"className="w-[1.3rem] h-[1.6rem] rotate-180 mt-1" width={50} height={50} alt="arrow-down" /></li>
+            </ul>
+            <ul className="flex gap-[2rem] items-center ">
+              <li >Ingresar
+              </li>
+              <li > <button className="bg-[#d31c92] font-semibold text-white px-7 py-3 rounded-lg hover:bg-[#86197d] cursor-pointer transition-colors">Crear cuenta</button></li>
+              <li className="flex gap-2">ES <Image src="https://cdn-icons-png.flaticon.com/128/10412/10412566.png"className="w-[1.3rem] h-[1.6rem] rotate-180 mt-1" width={50} height={50} alt="arrow-down" />
+              </li>
+            </ul>
+        </div>
       </nav>
       <div className="bg-[#f3f3fa] py-[8rem]">
         <div className="max-w-[110rem] mx-auto">
